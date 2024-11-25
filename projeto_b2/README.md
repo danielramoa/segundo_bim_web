@@ -39,37 +39,15 @@ A redução percentual no tempo foi calculada com a regra de três:
 
 A redução percentual no tempo de execução foi calculada utilizando a regra de três simples. O tempo médio do algoritmo original foi 12 ms, e o tempo do algoritmo otimizado foi 3 ms. Para calcular a redução percentual, aplicamos a regra de três:
 
-\[
-\text{Algoritmo Original} = 12 \text{ ms}
-\]
-\[
-\text{Algoritmo Otimizado} = 3 \text{ ms}
-\]
+12 __ 100%
 
-Agora, aplicamos a regra de três:
+3  __ x
 
-\[
-12 \text{ ms} \longrightarrow 100\%
-\]
-\[
-3 \text{ ms} \longrightarrow x
-\]
+12x == 300%
 
-Resolvendo a regra de três:
+x == 25%
 
-\[
-12x = 300
-\]
-\[
-x = \frac{300}{12} = 25\%
-\]
-
-Portanto, o algoritmo otimizado leva **25%** do tempo do algoritmo original. Isso significa que a **redução percentual** no tempo de execução é:
-
-\[
-100\% - 25\% = 75\%
-\]
-
+100% -- 25% == 75%
 
 Portanto, o algoritmo otimizado é **75% mais rápido** que o original.
 
