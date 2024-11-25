@@ -16,68 +16,7 @@ Para comparar os algoritmos, utilizamos a função `console.time()` e `console.t
 - **Algoritmo Antigo**: 12 ms  
 - **Algoritmo Otimizado**: 3 ms  
 
-### Redução percentual:
-A redução no tempo de processamento foi calculada usando a seguinte fórmula:
 
-\[
-\text{Redução Percentual} = \frac{\text{Tempo Antigo} - \text{Tempo Novo}}{\text{Tempo Antigo}} \times 100
-\]
-
-Substituindo os valores:
-
-\[
-\text{Redução Percentual} = \frac{12 - 3}{12} \times 100 = 75\%
-\]
-
-### Conclusão:
-A versão otimizada é **75% mais rápida** do que a versão original, comprovando sua eficiência.
-
----
-
-## 📄 Implementações
-
-### Algoritmo Original (Ineficiente)
-'javascript'
-function gerarAleatoriosAntigo(qtd) {
-    const vetor = [];
-    const geracoes = [];
-
-    while (vetor.length < qtd) {
-        const aleatorio = Math.floor(Math.random() * 60 + 1);
-        geracoes.push(aleatorio);
-
-        if (!vetor.includes(aleatorio)) {
-            vetor.push(aleatorio);
-        }
-    }
-    return vetor;
-}
-
-# Algoritmo Otimizado para Geração de Números Aleatórios Únicos
-
-Este repositório apresenta a versão otimizada de um algoritmo para geração de números aleatórios únicos em JavaScript. A proposta é melhorar o desempenho eliminando desperdícios computacionais presentes na abordagem original, reduzindo o tempo de execução e otimizando o uso de recursos.
-
----
-
-## 📄 Algoritmo Otimizado
-
-O algoritmo otimizado utiliza uma abordagem que gera todos os números possíveis de antemão, embaralha os valores e seleciona os números desejados, evitando repetições desnecessárias.
-
-### Implementação:
-`javascript'
-function gerarAleatoriosOtimizado(qtd) {
-    // Gerar todos os números de 1 a 60
-    const numeros = Array.from({ length: 60 }, (_, i) => i + 1);
-
-    // Embaralhar os números
-    for (let i = numeros.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [numeros[i], numeros[j]] = [numeros[j], numeros[i]];
-    }
-
-    // Retornar os primeiros 'qtd' números
-    return numeros.slice(0, qtd);
-}
 # Comparação de Desempenho, Benefícios da Otimização e Conclusão
 
 Este documento detalha os resultados da comparação de desempenho entre o algoritmo original e o algoritmo otimizado para geração de números aleatórios únicos, destacando os benefícios da otimização implementada e apresentando a conclusão baseada nos testes realizados.
@@ -94,17 +33,15 @@ Para comparar os algoritmos, utilizamos `console.time()` e `console.timeEnd()` p
 - **Tempo médio do Algoritmo Otimizado**: **3 ms**
 
 ### Cálculo da Redução Percentual:
-A redução percentual no tempo foi calculada com a fórmula:
+A redução percentual no tempo foi calculada com a regra de três:
 
-\[
-\text{Redução Percentual} = \frac{\text{Tempo Antigo} - \text{Tempo Novo}}{\text{Tempo Antigo}} \times 100
-\]
+12 --- 100%
+3  --- x
 
-Substituindo os valores:
+12x == 300
+x == 25%
 
-\[
-\text{Redução Percentual} = \frac{12 - 3}{12} \times 100 = 75\%
-\]
+100% - 25% = 75%.
 
 Portanto, o algoritmo otimizado é **75% mais rápido** que o original.
 
