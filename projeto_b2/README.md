@@ -35,13 +35,41 @@ Para comparar os algoritmos, utilizamos `console.time()` e `console.timeEnd()` p
 ### Cálculo da Redução Percentual:
 A redução percentual no tempo foi calculada com a regra de três:
 
-12 --- 100%
-3  --- x
+### Cálculo da Redução Percentual
 
-12x == 300
-x == 25%
+A redução percentual no tempo de execução foi calculada utilizando a regra de três simples. O tempo médio do algoritmo original foi 12 ms, e o tempo do algoritmo otimizado foi 3 ms. Para calcular a redução percentual, aplicamos a regra de três:
 
-100% - 25% = 75%.
+\[
+\text{Algoritmo Original} = 12 \text{ ms}
+\]
+\[
+\text{Algoritmo Otimizado} = 3 \text{ ms}
+\]
+
+Agora, aplicamos a regra de três:
+
+\[
+12 \text{ ms} \longrightarrow 100\%
+\]
+\[
+3 \text{ ms} \longrightarrow x
+\]
+
+Resolvendo a regra de três:
+
+\[
+12x = 300
+\]
+\[
+x = \frac{300}{12} = 25\%
+\]
+
+Portanto, o algoritmo otimizado leva **25%** do tempo do algoritmo original. Isso significa que a **redução percentual** no tempo de execução é:
+
+\[
+100\% - 25\% = 75\%
+\]
+
 
 Portanto, o algoritmo otimizado é **75% mais rápido** que o original.
 
