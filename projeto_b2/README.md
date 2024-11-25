@@ -37,7 +37,7 @@ A versão otimizada é **75% mais rápida** do que a versão original, comprovan
 ## 📄 Implementações
 
 ### Algoritmo Original (Ineficiente)
-```javascript
+'javascript'
 function gerarAleatoriosAntigo(qtd) {
     const vetor = [];
     const geracoes = [];
@@ -64,7 +64,7 @@ Este repositório apresenta a versão otimizada de um algoritmo para geração d
 O algoritmo otimizado utiliza uma abordagem que gera todos os números possíveis de antemão, embaralha os valores e seleciona os números desejados, evitando repetições desnecessárias.
 
 ### Implementação:
-```javascript
+`javascript'
 function gerarAleatoriosOtimizado(qtd) {
     // Gerar todos os números de 1 a 60
     const numeros = Array.from({ length: 60 }, (_, i) => i + 1);
